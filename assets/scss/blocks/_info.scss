@@ -1,0 +1,48 @@
+/*info*/
+.info{
+    background: #222224;
+
+    &_list{
+        padding: 105px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &_item{
+        width: 32%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include tablet{
+            margin-bottom: 50px;
+            width: 100%;
+        }
+    }
+
+    &_item:last-child{
+        margin-bottom: 0px;
+    }
+    &_img{
+        height: 40px;
+    }
+    &_title{
+        margin: 19px 0 16px;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FBFBFB;
+    }
+    &_text{
+        font-size: 14px;
+        text-align: center;
+        color: #FBFBFB;
+    }
+}
+
+/*end info*/

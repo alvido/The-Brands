@@ -1,0 +1,108 @@
+/*subscribe*/
+.subscribe{
+    background: url(../images/bg-sub.png) no-repeat left;
+    background-size: cover;
+
+    @include tablet {
+        background: rgba(244, 244, 244) url(../images/bg-sub.png) no-repeat bottom;
+        background-position-x: -10px;
+        background-size: inherit;
+    }
+
+    &_wraper{
+        display: flex;
+        justify-content: space-between;
+        padding: 125px 0;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0 140px;
+        }
+    }
+    &_comment{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        max-width: 360px;
+
+        @include laptop{
+            width: 50%;
+            max-width: none;
+        }
+
+        @include tablet{
+            width: 400px;
+            margin-bottom: 50px;
+        }
+
+        @include mobile{
+            width: auto;
+        }
+    }
+
+    &_comment:last-child{
+        margin: 0;
+    }
+
+    &_text{
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    
+        color: #222224;
+    }
+    &_title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 167.2%;
+        color: #222224;
+    }
+    &_subtitle{
+        font-weight: 400;
+        font-size: 18px;
+        color: #222224;
+
+        @include mobile{
+            @include font (14px, 22px);
+        }
+    }
+    &_form{
+        margin-top: 32px;
+        display: flex;
+    }
+    &_input{
+        width: 256px;
+        height: 50px;
+        padding: 7px 22px;
+        background: #E1E1E1;
+        font-size: 14px;
+        outline: none;
+        border-radius: 25px 0 0 25px;
+
+        @include mobile {
+            width: 200px;
+        }
+    }
+    &_btn{
+        width: 100px;
+        height: 50px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #F16D7F;
+        border-radius: 0 25px 25px 0;
+        transition: .3s;
+        cursor: pointer;
+    }
+    &_btn:hover{
+        color: $dark-pink;
+        background: $pink;
+        @include border(1px, solid, $dark-pink)
+    }
+}
+
+/*end subscribe*/
